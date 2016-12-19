@@ -11,6 +11,7 @@
 % packages
 \usepackage{graphicx}
 \usepackage{tikz}
+\usetikzlibrary{arrows,shapes,positioning, shadows,trees}
 \usepackage{enumerate}
 
 % ------------------------------------------------------------------------------------
@@ -37,16 +38,15 @@ Unser Projekt ist die Gestaltung einer \textit{Kochbuchwebseite}.
 \textbf{Inhalt}\\
 Die Seite bietet eine Sammlung von Rezepten aller Art.
 Die Rezepte sind in verschiedene Kategorien eingeordnet und können sortiert und durchsucht werden.
-Nutzer können Rezepte hinzufügen, kommentieren und ein eigenes digitales Kochbuch verwalten, in dem sie sich Rezepte speichern.
-
-(Innerhalb der Rezepte gibt es zu ausgewählen Techniken und Angaben hinweise für unerfahrene Köche. Zum Beispiel kann der Nutzer eine Erklärung dazu erhalten, was eine Prise ist.)
+Nutzer können Rezepte bewerten, hinzufügen, kommentieren und ein eigenes digitales Kochbuch verwalten, in dem sie sich Rezepte speichern.
+Innerhalb der Rezepte gibt es zu ausgewählten Techniken und Angaben Hinweise für unerfahrene Köche. Zum Beispiel kann der Nutzer eine Erklärung dazu erhalten, was eine Prise ist.
 
 \textbf{Zielgruppe}\\
 Zu der Zielgruppe gehören 16 bis 40 jährige Gelegenheitsköche, die der digitalen Version eines Kochbuchs offen gegenüberstehen.
 Einerseits spricht die Seite unerfahrene Köche an, die sich über Rezepte und bestimmte Techniken informieren wollen. Andererseits ist die Seite geeignet für inspirationssuchende Gelegenheitsköche, die ein Rezept für einen bestimmten Anlass suchen. Erfahrene Köche haben die Möglichkeit, neue Rezepte zu finden, sich Rezepte zu speichern, und schnell auf sie zuzugreifen,
 
 \textbf{Ziele} \\
-Die beiden Hauptfunktionen der Webseite sind das effektive Durchsuchen von Rezepten und das Speichern von Rezepten in einem eigenen Kochbuch. Nutzer finden Inspirationen, Kommentare und Erfahrungen anderer Köche, sowie Informationen zu den wichtigsten Techniken.
+Die beiden Hauptfunktionen der Webseite sind das effektive Durchsuchen von Rezepten und das Speichern von Rezepten in einem eigenen Kochbuch. Nutzer finden Inspirationen, Kommentare und Erfahrungen anderer Köche, sowie Informationen zu den wichtigsten Kochtechniken.
 
 % Notizen:
 %Features: \\
@@ -75,7 +75,7 @@ Die beiden Hauptfunktionen der Webseite sind das effektive Durchsuchen von Rezep
  
  %Plätzchen backen, sonst kein Vielkocher $\to$ Suchfunktion oder über Kategoriennavigation \\ 16 jährige Schülerin
  
- \item Karl ist Student und hat hunger, nicht viele Zutaten in der Küche, aber keine Lust, einkaufen zu gehen. Auf der Webseite gibt er einige Zutaten ein, die ihm zur Verfügung stehen und erhält eine kleine Auswahl von Rezepten.
+ \item Karl ist Student und hat Hunger, nicht viele Zutaten in der Küche, aber keine Lust, einkaufen zu gehen. Auf der Webseite gibt er einige Zutaten ein, die ihm zur Verfügung stehen und erhält eine kleine Auswahl von Rezepten.
  
  %Kochen nach Zutaten die zur Verfügung stehen - Rezept finden $\to$ verwendet Suchfunktion nach Zutat \\ fauler Student (oder WG)
  
@@ -83,7 +83,6 @@ Die beiden Hauptfunktionen der Webseite sind das effektive Durchsuchen von Rezep
  
  %Inspirationssuchender $\to$ verwendet Merkfunktion \\ Hausfrau ca 40, will neues ausprobieren
 \end{enumerate}
-
 
 
 \end{document}
