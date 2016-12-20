@@ -18,7 +18,7 @@
 % Header
 % ------------------------------------------------------------------------------------
 \renewcommand*{\maketitle}{%
-	{\centering\LARGE\sffamily\bfseries Aufgabe 3: Entwürfe \par}
+	{\centering\LARGE\sffamily\bfseries Aufgabe 3: Strukturierung der Nutzeroberfläche \par}
 	\vspace{3em}
 }
 
@@ -30,8 +30,10 @@
 \maketitle
 
 % ------------------------------------------------------------------------------------
+\section*{Entwurf 1} % Chris 1
 
-Chris 1:
+\includegraphics[scale=0.8]{Entwürfe/Chris/chris1.pdf}
+
 
 Vorteile: \\
 - einfach und übersichtlich\\
@@ -41,7 +43,10 @@ Nachteile: \\
 - Menüpunkte Backen/Kochen können unübersichtlich werden bei zu vielen Unterkategorien\\
 - unklar, was Login beinhaltet (welche Funktionen hat man davon?) -> Hinweis auf persönliche Funktionen / Möglichkeiten
 
-Chris2:
+% ------------------------------------------------------------------------------------
+\section*{Entwurf 2} % Chris 2
+
+\includegraphics[scale=0.8]{Entwürfe/Chris/chris2.pdf}
 
 Vorteile:\\
 - klassischer Aufbau und daher intuitives Zurechtfinden möglich (Position von Login und Suche) \\
@@ -52,7 +57,11 @@ Nachteile:\\
 - Seitenmenü kann problematisch werden, wenn Menüpunkte zu lang sind.
 
 
-Velat 1:
+% ------------------------------------------------------------------------------------
+\section*{Entwurf 3} % Velat 1
+
+\includegraphics[scale=0.8]{Entwürfe/Velat/velat1.pdf}
+
 
 Vorteile:\\
 - es ist ersichtlich, dass es einen eigenen Kochbuchbereich gibt, für den man sich einloggen muss.
@@ -65,7 +74,11 @@ Nachteile:\\
 - Suchbereich verbraucht Platz von Inhaltsseite
 - Suchfunktion zu kompliziert
 
-Velat 2:
+% ------------------------------------------------------------------------------------
+\section*{Entwurf 4} % Velat 2
+
+\includegraphics[scale=0.8]{Entwürfe/Velat/velat2.pdf}
+
 
 Vorteile:\\
 - seitlicher Suchbereich: Kategorien können aus- und eingeklappt werden: übersichtlich
@@ -74,7 +87,15 @@ Vorteile:\\
 Nachteile:\\
 - im Menü sowohl mein Kochbuch als auch Login -> Unterschied?
 
-Tamar 1:
+
+% ------------------------------------------------------------------------------------
+\section*{Entwurf 5} % Tamar 1
+
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf1.1_home.png}
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf1.2_rezeptseite.png}\\
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf1.3_hinzufügen.png}
+
+
 
 Vorteile: \\
 - klassischer Aufbau
@@ -86,7 +107,14 @@ Nachteile:
 - Suchfunktion verbraucht Platz
 - auf Rezeptseite muss Rezept mehr Platz einnehmen
 
-Tamar 2:
+% ------------------------------------------------------------------------------------
+\section*{Entwurf 6} % Tamar 2
+
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.1_home.png}
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.2_rezeptseite.png}\\
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.3_filtern1.png}
+%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.3_filtern2.png}
+
 
 Vorteile: \\
 - mehr Platz
@@ -98,14 +126,24 @@ Nachteile:
 
 
 
+% ------------------------------------------------------------------------------------
+\section*{Planung des Prototypen}
 
-Elemente, die beibehalten werden sollen:
+\begin{enumerate}
+ \item möglichst übersichtliches, klassisches Design um intuitives Zurechtfinden zu ermöglichen (oben rechts Login)
+ \item Navigation aufgespalten:
+ \begin{itemize}
+  \item einerseits: horizontale Navigation stellt organisatorische Dinge dar: Metanavigation, wie Home und Profilverwaltung / persönlicher Bereich
+  \item andererseits: Seitenmenü mit der Navigation durch die Rezepte (inhaltlich) \\
+  Seitenmenü enthält Kategorien, nach denen Rezepte sortiert/gefiltert werden können und für "suchdominante" Menschen, und solche, die genau wissen, was sie wollen die Suchleiste
+ \end{itemize}
+ \item Navigation und Struktur der Webseite ist für den Nutzer ersichtlich, da auf jeder Seite Navigation an gleicher Stelle bleibt und sich eventuell dynamisch anpasst (checkboxen)
+ \item Navigation nimmt nicht notwendigerweise zu viel Platz der Webseite ein, da sie eingeklappt/versteckt werden kann
+ \item um seitliches Menü übersichtlich zu halten, sind die einzelnen Kategorien eingeklappt und können ausgeklappt werden
+ 
+ \item hauptsächlicher Inhalt der Hauptseite sind die Bilder der Rezepte
 
-- seitlich Rezeptnavigation: enthält Hauptrezeptnavigation (Kochen / Backen), sowie Suche und Kategorien
-  einzelne Menüpunkte ausklappbar
-  seitliche Rezeptnavigation kann versteckt / einklappt werden
-- oben rechts Login bzw. eigenes Kochbuch
-- 
+\end{enumerate}
 
 
 \end{document}
