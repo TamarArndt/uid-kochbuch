@@ -1,0 +1,97 @@
+/* --------------------------------------------------------- */
+/* Rezeptseite
+/* --------------------------------------------------------- */
+
+.addrecipe, .profile {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+
+#addrecipe-form, #profile-content {
+  /*background-color: #BFBFBA; /*458241, BFBFBA;*/
+  padding: 20px 20px 60px 20px;
+  border-radius: 5px;
+}
+
+.addrecipe input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 12pt;
+    font-style: italic;
+}
+textarea:focus, select:focus {
+  outline-color: #458241;
+}
+
+input[type=file] {
+  display: none;
+}
+.upload {
+  display: inline-block;
+  margin: 10px 0 0 0;
+  background-color: white;
+  padding: 7px 7px;
+
+  font-size: 11pt;
+  border-radius: 5px;
+  box-shadow: 2px 3px 5px #A3A3A3;
+}
+
+#addrecipe {
+  margin: 50px 0 0 0;
+  float: right;
+  background-color: #458241;
+  color: white;
+  font-size: 12pt;
+}
+
+/* -------------------- Login --------------------- */
+
+.login {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 50%;
+  min-width: 500px;
+}
+
+#login-form {
+  background-color: #BFBFBA; /*458241, BFBFBA;*/
+  padding: 20px 20px 20px 20px;
+  border-radius: 5px;
+}
+
+.login input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 9px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 12pt;
+    font-style: italic;
+}
+
+/* -------------------- Profil -------------------- */
+
+#profile-content th, td {
+  padding: 5px;
+  min-width: 180px;
+  border-bottom: 1px solid white;
+}
+#profile-content table {
+  padding: 20px;
+  background-color: #BFBFBA;
+  border-radius: 5px;
+}
+#profile-content td:first-child {
+  font-weight: bold;
+}

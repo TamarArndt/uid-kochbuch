@@ -1,0 +1,84 @@
+/* --------------------------------------------------------- */
+/* Gallerie
+/* --------------------------------------------------------- */
+
+.gallery { }
+
+
+/* --------------------- Gallery Tiles --------------------- */
+
+.recipe-tile {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 7px solid #fff;
+  vertical-align: top;
+  background-color: #5C5C5C;
+  box-shadow: 5px 5px 5px #A3A3A3;
+  overflow: hidden;
+  position: relative; /* to position title within tile */
+}
+/* img in recipe-tile */
+.recipe-tile img {
+  width:200px;
+  height:200px;
+  max-width:100%;
+  max-height:200%;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  /*margin-bottom: 25px;*/
+}
+/* fill recipe-tiles with placeholder-color */
+.recipe-tile .placeholder {
+  width:200px;
+  height:200px;
+  max-width:100%;
+  max-height:200%;
+  position: relative;
+  object-fit: cover;
+  overflow: hidden;
+  background-color: #458241;
+}
+
+
+
+/* --------------------- Hover-Effekte --------------------- */
+.recipe-tile:hover {
+  transition: all 0.6s ease-in-out;
+  /*filter: blur(1px);*/
+  /*transform: scale(1.1);*/
+  /*-webkit-filter: grayscale(50%);
+  filter: grayscale(50%);*/
+  /*-webkit-filter: saturate(1.5);*/
+  /*opacity: 0.4;*/
+  -webkit-filter: contrast(130%);
+}
+
+
+/* --------------------- Title ----------------------------- */
+.recipe-title {
+  box-sizing: border-box;
+  position: absolute;
+  background: white;
+  padding: 20px 10px 20px 10px;
+  opacity: 0.8 !important;
+  width: 100%;
+  /* slide effect */
+  /* found on: https://css-tricks.com/slide-in-image-captions/ */
+  bottom: -100%;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+.recipe-tile:hover .recipe-title {
+  opacity: 1;
+  bottom: 0;
+}
+.recipe-title p {
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+  color: #2E382D;
+}

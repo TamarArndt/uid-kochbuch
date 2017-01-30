@@ -1,0 +1,222 @@
+/* --------------------------------------------------------- */
+/* Rezeptseite
+/* --------------------------------------------------------- */
+
+.recipe-content {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 70%;
+  float: left;
+}
+.recipe-aside {
+  box-sizing: border-box;
+  float: right;
+  min-height: 20em;
+  height: 100%;
+  padding: 1% 1% 1% 1%;
+  width: 30%;
+  border-left: 2px solid white;
+}
+.recipe-img-big img {
+  width:auto;
+  height:300px;
+  max-width:auto;
+  max-height:200%;
+  position: relative;
+  border: 7px solid #fff;
+  background-color: #5C5C5C;
+  box-shadow: 5px 5px 5px #A3A3A3;
+  /*overflow: hidden;*/
+}
+.recipe-content div {
+  margin-bottom: 30px;
+}
+.recipe-content h1 {
+  margin-top: 0;
+}
+
+
+/* ------------------- Zutaten ----------------------------- */
+table.zutaten td, th{
+    border-bottom: 1px solid white; /*#BFBFBA;*/
+    padding: 5px;
+    min-width: 110px;
+}
+table.zutaten {
+  border-top: 3px solid white;
+  margin-top: 5px;
+  width: 100%;
+}
+
+
+/* ------------------- Zubereitung ------------------------- */
+
+.preparation ol {
+  /*margin-left: 0;*/
+  padding-left: 25px;
+}
+.preparation li {
+  padding-left: 15px;
+  padding-bottom: 8px;
+}
+
+/* ------------------- Kommentar --------------------------- */
+
+.comment {
+  border-radius: 5px;
+  border: 1px solid white;
+  padding: 8px 15px 15px 15px;
+}
+.name {
+  font-weight: 600;
+  line-height: 20pt;
+}
+.date {
+  float: right;
+  font-style: italic;
+  line-height: 20pt;
+}
+.content {
+  padding-left: 40px;
+}
+
+.comment textarea {
+  background-color: #F2F2F2; /*BFBFBA;*/
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 12pt;
+    font-style: italic;
+}
+textarea:focus {
+  outline-color: #458241;
+  background-color: white;
+}
+
+/* -------------------- recipe-aside ----------------------- */
+
+/* -------------------- Rezeptmerken-Button ---------------- */
+
+p.hidden {
+  display: none;
+  color: #9C0000;
+  margin-top: -5px;
+  font-style: italic;
+}
+#keeprecipe:focus ~ p.hidden{
+  display: inline-block;
+}
+#keeprecipe {
+  margin-bottom: 10px;
+}
+.help-hover-text-left {
+  visibility: hidden;
+  font-weight: normal;
+  font-size: 10pt;
+  background-color: #9C0000;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 7px;
+  /* position of help-hover-div */
+  position: relative;
+  z-index: 1;
+}
+
+#keeprecipe:hover ~.help-hover-text-left {
+  visibility: visible;
+}
+
+
+/* -------------------- Filterbegriffe --------------------- */
+.recipe-aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+.recipe-aside ul a{
+  color: black;
+  display: block;
+  padding: 10px 20px;
+}
+.recipe-aside ul li{
+  position: relative;
+  background-color: white;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+.recipe-aside ul a:hover{
+  background: #458241;
+  color: white;
+}
+/* Ebene 0 */
+.recipe-aside ul > li{
+  display: block; /* untereinander */
+  margin-bottom: 5%;
+}
+
+/* Ebene 1 */
+.recipe-aside ul > li > ul {
+  background-color: white;
+  text-align: left;
+  width: auto;
+  display: none;
+  position: relative;
+  padding: 3px;
+  padding-left: 30px;
+}
+.recipe-aside ul > li > ul > li {
+  padding: 0; /*5px 0 5px 10px;*/
+  margin: 0;
+}
+/* checkbox verschwinden lassen */
+input[class="hidden"] {
+ position: absolute;
+ top: -9999px;
+ left: -9999px;
+}
+label.kategorie {
+  cursor: pointer;
+  user-select: none;
+  display:inline-block;
+  color: black;
+  background: #BFBFBA;
+  padding: 4%;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+label.kategorie::before {
+  margin-top: 2px;
+  margin-left: 5px; 
+  content: '';
+  width: 0; 
+  height: 0;
+  /* Indikator-Dreieck */
+  border-left: 9px solid #458241;
+  border-top: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 9px solid transparent; 
+  float: left;
+}
+/* checked */
+.recipe-aside input[class="hidden"]:checked ~ ul {
+ display: block;
+}
+.recipe-aside input[class="hidden"]:checked ~ label.kategorie::before {
+  margin-top: 8px;
+  margin-left: 0px;
+  margin-right: 5px;
+  content: '';
+  width: 0px; 
+  height: 0px;
+  /* umgedrehtes Dreieck */
+  border-left: 9px solid transparent;
+  border-top: 9px solid #458241;
+  border-right: 9px solid transparent;
+  border-bottom: 0px solid transparent;
+  float: left;
+}

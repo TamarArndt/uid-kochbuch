@@ -1,0 +1,64 @@
+/* --------------------------------------------------------- */
+/* Horizontale Navigation: äußere Struktur;
+/* --------------------------------------------------------- */
+
+/* used colors:
+green:	#458241		Hauptmenüpunkt bg --> #9C0000 (red)
+gray:	#BFBFBA		subitems hover bg
+white:				subitems bg */
+
+
+nav {
+	z-index: 1; /* always in front of content */
+	position: relative;
+}
+
+/* ------------ Ebene 0 ------------ */
+
+nav ul a {
+	color: white;
+}
+nav ul {
+	float: right;
+	margin: 0 5% 0% 0%;
+	padding: 0;
+	background-color: #9C0000;
+}
+
+/* relative position of all items */
+nav ul li {
+	display: inline-block;
+	position: relative;
+	padding: 10px 20px;
+	width: 150px;
+}
+
+
+/* ------------ Ebene 1 ------------ */
+
+nav ul li ul li { /* subitems */
+	box-sizing: border-box;
+	width: 100%;
+}
+nav ul li ul li a {
+	color: black;
+}
+
+nav ul > li > ul{
+	background-color: white;
+	text-align: left;
+	display: none; /* hide subitems */
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+nav ul > li:hover > ul{
+	display: block; /* show subitems */
+}
+
+nav ul > li > ul > li:hover {
+	background-color: #BFBFBA;
+}
