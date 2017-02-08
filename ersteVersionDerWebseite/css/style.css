@@ -1,0 +1,91 @@
+html{
+	font-family: Open Sans, Arial, sans-serif; /*besonders bis gängig*/
+  height: 100%;
+}
+body {
+  background-color: #D9D8C7;
+  margin: 0;
+  height: 100%;
+  min-height: 100%
+}
+
+
+header {
+  background: #458241;
+  height: 22%;
+  text-align: center;
+  background-image: url('../media/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 1px solid black;
+}
+
+main {
+  box-sizing: border-box;
+  padding: 1% 3% 3% 3%;
+  margin: 0%;
+  width: 80%;
+  float: right;
+}
+
+#siteWrapper { /* to manage footer position */
+  min-height: 90%;
+  margin-bottom: -20px;
+}
+
+footer {
+  background-color: #458241;
+  color: white;
+  height: 10%;
+  clear: both;
+  padding: 3% 0% 0% 0%;
+  text-align: center;
+  font-size: 1em;
+  border-top: 1px solid black;
+}
+
+
+/* TEXT */
+p {
+  text-align: justify;
+}
+.welcome {
+  margin: 0 10px 0 10px;
+  padding-bottom: 3em;
+  letter-spacing: 0.5px;
+  line-height: 20pt;
+}
+.loggedoutnote {
+  margin: 0 10px 0 10px;
+  padding-bottom: 3em;
+  letter-spacing: 0.5px;
+  line-height: 20pt;
+  color: #9C0000;
+}
+span.request { /*'Suchergebnisse für', 'gefilterte Rezepte', ... */
+font-weight: bold;
+font-size: 14pt;
+margin-right: 20px;
+}
+span.term {
+  font-size: 14pt;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+/* LINKS */
+a:link{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+a:hover{
+  /*color: #940000;*/
+}
+a.greenlink {
+  color: #458241;
+}
+a.greenlink:hover {
+  text-decoration: underline;
+}

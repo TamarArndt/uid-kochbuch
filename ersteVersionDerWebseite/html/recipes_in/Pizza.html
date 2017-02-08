@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kochbuch</title>
+	<link rel="icon" href="../../media/favicon.svg" type="image/svg">
+	<!-- use font-awesome for search-icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../css/nav_horizontal.css">
+	<link rel="stylesheet" type="text/css" href="../../css/nav_sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style_gallery.css">
+
+	<link rel="stylesheet" type="text/css" href="../../css/style_recipepage.css">
+</head>
+
+<!-- ................................................................. -->
+
+<body>
+
+	<header>
+	</header>
+
+	<!-- horizontal menu -->
+	<nav>
+		<ul>
+			<li> <a href="../meinKochbuch.html">mein Kochbuch</a>
+				<ul>
+					<li><a href="../profil.html">mein Profil</a></li>
+					<li><a href="../addrecipe.html">Rezept hinzufügen</a></li>
+					<li><a href="../index_justloggedout.html">Logout</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- ................................................................. -->
+	<div id="siteWrapper">
+		
+
+		<!-- sidebar menu -->
+		<aside>
+			<div>
+				<button onclick="location.href='../index.html'" class="mainbutton" name="startseite">Auswahl zurücksetzen</button>
+			</div>
+
+			<!-- Suchbereich -->
+			<div>
+				<h4>Suchbereich:</h4>
+				<div class="greyarea" id="suchbereich">
+					<form>
+						<label class="suchbereich"> <input onclick="location.href='../allrecipes.html'" type="radio" name="suchbereich" checked/> <span>alle Rezepte</span> </label><br/>
+						<label class="suchbereich"> <input onclick="location.href='../meinKochbuch.html'" type="radio" name="suchbereich" /> <span>nur meine Rezepte</span> </label>
+						<!-- nur wenn ausgeloggt -->
+						<!--
+						<div class="help-hover"> ?
+							<span class="help-hover-text"> logge dich ein um diese Funktion zu nutzen </span>
+						</div> -->
+					</form>
+				</div>
+			</div>
+
+			<!-- Suchfeld -->
+			<div class="greyarea">
+				<form action="../search.html">
+					<input type="text" name="search" placeholder="Plätzchen"></input>
+					<button class="icon"><i class="fa fa-search"></i></button>
+					<p class="help">Suche nach einem beliebigen Stichwort, einer Zutat, einem Rezepttitel, ...</p>
+				</form>
+			</div>
+			<br/> 
+
+			<!-- Filterkategorien -->
+			<div>	
+				<h4>Filtern nach ...</h4>
+				<ul>
+					<li>
+						<input type="checkbox" class="hidden" id="zubereitungsart" />
+						<label class="kategorie" for="zubereitungsart" onclick>Zubereitungsart</label>
+						
+						<ul>
+							<li><label> <input type="checkbox" name="kochen"/> Kochen </label></li>
+							<li><label> <input type="checkbox" name="backen"/> Backen </label></li>
+							<li><label> <input type="checkbox" name="braten"/> Braten </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="hauptzutat" />
+						<label class="kategorie" for="hauptzutat" onclick>Hauptzutat</label>
+						<ul>
+							<li><label> <input type="checkbox" name="fleisch"/> Fleisch </label></li>
+							<li><label> <input type="checkbox" name="fisch"/> Fisch </label></li>
+							<li><label> <input type="checkbox" name="gemüse"/> Gemüse </label></li>
+							<li><label> <input type="checkbox" name="obst"/> Obst </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="anlass" />
+						<label class="kategorie" for="anlass" onclick>Anlass</label>
+						<ul>
+							<li><label> <input type="checkbox" name="mittagabend"/> Mittag &amp Abend </label></li>
+							<li><label> <input type="checkbox" name="frühstück"/> Frühstück </label></li>
+							<li><label> <input type="checkbox" name="nachtisch"/> Nachtisch </label></li>
+							<li><label> <input type="checkbox" name="kaffee"/> Kaffeetrinken </label></li>
+							<li><label> <input type="checkbox" name="snack"/> Snack </label></li>
+							<li><label> <input type="checkbox" name="getränk"/> Getränk </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="land" />
+						<label class="kategorie" for="land" onclick>Land</label>
+						<ul>
+							<li><label> <input type="checkbox" name="griechisch"/> griechisch </label></li>
+							<li><label> <input type="checkbox" name="türkisch"/> türkisch </label></li>
+							<li><label> <input type="checkbox" name="italienisch"/> italienisch </label></li>
+							<li><label> <input type="checkbox" name="indisch"/> indisch </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="ernährungsweise" />
+						<label class="kategorie" for="ernährungsweise" onclick>Ernährungsweise</label>
+						<ul>
+							<li><label> <input type="checkbox" name="gesund"/> gesund </label></li>
+							<li><label> <input type="checkbox" name="vegetarisch"/> vegetarisch </label></li>
+							<li><label> <input type="checkbox" name="vegan"/> vegan </label></li>
+							<li><label> <input type="checkbox" name="glutenfrei"/> glutenfrei </label></li>
+							<li><label> <input type="checkbox" name="laktosefrei"/> laktosefrei </label></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Filterbutton -->
+			<div>
+				<!--<button onclick="location.href='#'" class="mainbutton" name="auswahl aufheben">Auswahl aufheben</button> -->
+				<button onclick="location.href='../filter.html'" class="mainbutton" name="rezepte filtern">Rezepte filtern</button>
+			</div>
+			
+		</aside>
+
+
+		<!-- ................................................................. -->
+		<main>
+
+			<div>
+				<button onclick="location.href='../index.html'" class="minorbutton" name="zurück zur auswahl">&#xab; zurück zur Auswahl</button>
+			</div>
+
+			<!-- Recipe content -->
+			<div class="recipe-content">
+				<h1>Pizza</h1>
+<!-- Quelle: http://www.chefkoch.de/rezepte/1151011221381450/Der-beste-Pizzateig.html?portionen=4 -->
+				<div class="recipe-img-big">
+					<img src="../../media/foodpictures/Pizza.jpg" alt="Pizza"/>
+				</div>
+
+				<!-- Zutaten -->
+				<div class="ingredients">
+					<h3>Zutaten</h3>
+
+					für 4 Portionen
+
+					<table class="zutaten">
+						<tr>	<td>500 g</td>		<td>Mehl</td> </tr>
+						<tr>	<td>300 ml</td>		<td>Wasser</td>	</tr>
+						<tr>	<td>2 TL</td>		<td>Salz</td> </tr>
+						<tr>	<td>1 Dose</td>		<td>Tomaten</td> </tr>
+						<tr>	<td></td>			<td>Salz & Pfeffer</td>	</tr>
+						<tr>	<td></td>			<td>Zucker</td>	</tr>
+						<tr>	<td></td>			<td>Basilikum</td>	</tr>
+						<tr>	<td></td>			<td>Oregano</td> </tr>
+					</table>
+
+				</div>
+
+				<!-- Zubereitung -->
+				<div class="preparation">
+					<h3>Zubereitung</h3>
+
+					<ol>
+						<li>Mehl mit dem Salz sieben und in Teigrührmaschine füllen.</li> 
+						<li>Hefe im lauwarmen Wasser auflösen & zum Mehl/Salz-Gemisch geben. </li>
+						<li>20 Minuten kneten</li>
+						<li>Teig für 2 Stunden mit feuchtem Tuch abdecken</li>
+						<li>Teig in vier Stücke zu je 200 Gramm teilen, zu Kugeln formen & für 6 Stunden abdecken.</li>
+						<li>Teig so dünn wie möglich ausrollen oder ziehen (unter 4mm)</li>
+						<li>Für Tomatensoße: Eine Dose Schältomaten mit (viel) Knoblauch, Salz, Pfeffer, etwas Zucker, Basilikum und Oregano kalt pürieren</li>
+						<li>Soße mittig auf die Pizza auftragen und in kreisrunden Bewegungen mit der Kelle über die komplette Pizza verteilen.</li>
+						<li>Im vorgeheizten Backofen bei 260° für 3-4 Minuten backen</li>						
+					</ol>
+ 
+				</div>
+
+				<!-- Kommentare -->
+				<div class="comments">
+					<h3>Kommentare</h3>
+
+					<div class="comment">
+						Die Kommentarfunktion ist für dieses Rezept deaktiviert.
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<!-- Recipe aside -->
+			<div class="recipe-aside">
+				<button class="mainbutton" id="keeprecipe" name="Rezept merken">Rezept merken</button>
+				<p class="hidden">Das Rezept wurde in deinem Kochbuch gespeichert.</p>
+				
+				<p>hinzugefügt von: kürbis001 <br/>
+					Aufwand: mittel
+				</p>
+
+				<ul>
+					<li>
+						<input type="checkbox" class="hidden" id="kategorien" />
+						<label class="kategorie" for="kategorien" onclick>zugeordnete Filterbegriffe</label>
+						<ul>
+							<li>herzhaft</li>
+							<li>+ Begriff hinzufügen</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+
+		</main>
+
+	</div>
+
+
+	<!-- ................................................................. -->
+	<footer>
+		Impressum
+	</footer>
+
+</body>
+</html>

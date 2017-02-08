@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kochbuch</title>
+	<link rel="icon" href="../../media/favicon.svg" type="image/svg">
+	<!-- use font-awesome for search-icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../css/nav_horizontal.css">
+	<link rel="stylesheet" type="text/css" href="../../css/nav_sidebar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/style_gallery.css">
+
+	<link rel="stylesheet" type="text/css" href="../../css/style_recipepage.css">
+</head>
+
+<!-- ................................................................. -->
+
+<body>
+
+	<header>
+	</header>
+
+	<!-- horizontal menu -->
+	<nav>
+		<ul>
+			<li> <a href="../login.html">mein Kochbuch</a>
+				<ul>
+					<li><a href="../login.html">Login</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+	<!-- ................................................................. -->
+	<div id="siteWrapper">
+		
+
+		<!-- sidebar menu -->
+		<aside>
+			<div>
+				<button onclick="location.href='../index_out.html'" class="mainbutton" name="startseite">Auswahl zurücksetzen</button>
+			</div>
+
+			<!-- Suchbereich -->
+			<div>
+				<h4>Suchbereich:</h4>
+				<div class="greyarea" id="suchbereich">
+					<form>
+						<label class="suchbereich"> <input onclick="location.href='../allrecipes_out.html'" type="radio" name="suchbereich" checked/> <span>alle Rezepte</span> </label><br/>
+						<label class="suchbereich"> <input onclick="location.href='../meinKochbuch.html'" type="radio" name="suchbereich" disabled/> <span>nur meine Rezepte</span> </label>
+						<!-- nur wenn ausgeloggt -->
+						<div class="help-hover"> ?
+							<span class="help-hover-text"> logge dich ein um diese Funktion zu nutzen </span>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- Suchfeld -->
+			<div class="greyarea">
+				<form action="../search_out.html">
+					<input type="text" name="search" placeholder="Plätzchen"></input>
+					<button class="icon"><i class="fa fa-search"></i></button>
+					<p class="help">Suche nach einem beliebigen Stichwort, einer Zutat, einem Rezepttitel, ...</p>
+				</form>
+			</div>
+			<br/> 
+
+			<!-- Filterkategorien -->
+			<div>	
+				<h4>Filtern nach ...</h4>
+				<ul>
+					<li>
+						<input type="checkbox" class="hidden" id="zubereitungsart" />
+						<label class="kategorie" for="zubereitungsart" onclick>Zubereitungsart</label>
+						
+						<ul>
+							<li><label> <input type="checkbox" name="kochen"/> Kochen </label></li>
+							<li><label> <input type="checkbox" name="backen"/> Backen </label></li>
+							<li><label> <input type="checkbox" name="braten"/> Braten </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="hauptzutat" />
+						<label class="kategorie" for="hauptzutat" onclick>Hauptzutat</label>
+						<ul>
+							<li><label> <input type="checkbox" name="fleisch"/> Fleisch </label></li>
+							<li><label> <input type="checkbox" name="fisch"/> Fisch </label></li>
+							<li><label> <input type="checkbox" name="gemüse"/> Gemüse </label></li>
+							<li><label> <input type="checkbox" name="obst"/> Obst </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="anlass" />
+						<label class="kategorie" for="anlass" onclick>Anlass</label>
+						<ul>
+							<li><label> <input type="checkbox" name="mittagabend"/> Mittag &amp Abend </label></li>
+							<li><label> <input type="checkbox" name="frühstück"/> Frühstück </label></li>
+							<li><label> <input type="checkbox" name="nachtisch"/> Nachtisch </label></li>
+							<li><label> <input type="checkbox" name="kaffee"/> Kaffeetrinken </label></li>
+							<li><label> <input type="checkbox" name="snack"/> Snack </label></li>
+							<li><label> <input type="checkbox" name="getränk"/> Getränk </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="land" />
+						<label class="kategorie" for="land" onclick>Land</label>
+						<ul>
+							<li><label> <input type="checkbox" name="griechisch"/> griechisch </label></li>
+							<li><label> <input type="checkbox" name="türkisch"/> türkisch </label></li>
+							<li><label> <input type="checkbox" name="italienisch"/> italienisch </label></li>
+							<li><label> <input type="checkbox" name="indisch"/> indisch </label></li>
+						</ul>
+					</li>
+					<li><input type="checkbox" class="hidden" id="ernährungsweise" />
+						<label class="kategorie" for="ernährungsweise" onclick>Ernährungsweise</label>
+						<ul>
+							<li><label> <input type="checkbox" name="gesund"/> gesund </label></li>
+							<li><label> <input type="checkbox" name="vegetarisch"/> vegetarisch </label></li>
+							<li><label> <input type="checkbox" name="vegan"/> vegan </label></li>
+							<li><label> <input type="checkbox" name="glutenfrei"/> glutenfrei </label></li>
+							<li><label> <input type="checkbox" name="laktosefrei"/> laktosefrei </label></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- Filterbutton -->
+			<div>
+				<!--<button onclick="location.href='#'" class="mainbutton" name="auswahl aufheben">Auswahl aufheben</button> -->
+				<button onclick="location.href='../filter_out.html'" class="mainbutton" name="rezepte filtern">Rezepte filtern</button>
+			</div>
+			
+		</aside>
+
+
+		<!-- ................................................................. -->
+		<main>
+
+			<div>
+				<button onclick="location.href='../index_out.html'" class="minorbutton" name="zurück zur auswahl">&#xab; zurück zur Auswahl</button>
+			</div>
+
+			<!-- Recipe content -->
+			<div class="recipe-content">
+				<h1>Gebratener Spargel mit Kartoffeln und Bacon</h1>
+
+				<div class="recipe-img-big">
+					<img src="../../media/foodpictures/gebratenerSpargelmitBaconKartoffel.JPG" alt="Gebratener Spargel mit Kartoffeln und Bacon"/>
+				</div>
+
+				<!-- Zutaten -->
+				<div class="ingredients">
+					<h3>Zutaten</h3>
+
+					für 2 Personen
+
+					<table class="zutaten">
+						<tr>	<td>1 Bund</td>		<td>grüner Spargel</td>	</tr>
+						<tr>	<td>1 EL</td>		<td>Öl</td>	</tr>
+						<tr>	<td>nach Belieben</td>		<td>Bacon</td>	</tr>
+						<tr>	<td>zum Servieren</td>		<td>Kartoffeln, Sauce Hollandaise</td>	</tr>
+					</table>
+
+				</div>
+
+				<!-- Zubereitung -->
+				<div class="preparation">
+					<h3>Zubereitung</h3>
+
+					<ol>
+						<li>Spargel schälen.</li>
+						<li>Eine Pfanne etwa 1 cm hoch mit Wasser befüllen, 1 EL Öl hinzugeben und die Spargelstangen hineinlegen. Bei mittlerer Hitze köcheln lassen bis der Spargel gar ist.</li>
+						<li>Immer 2 bis 3 Spargelstangen zusammen mit einem Stück Bacon umwickeln und kurz anbraten.</li>
+						<li>Mit Kartoffeln und Sauce Hollandaise servieren</li>
+					</ol>
+
+				</div>
+
+				<!-- Kommentare -->
+				<div class="comments">
+					<h3>Kommentare</h3>
+
+					<div class="comment">
+						Die Kommentarfunktion ist für dieses Rezept deaktiviert.
+					</div>
+
+				</div>
+
+
+			</div>
+
+			<!-- Recipe aside -->
+			<div class="recipe-aside">
+				<button class="mainbutton" id="keeprecipe" name="Rezept merken" disabled>Rezept merken</button>
+				<span class="help-hover-text-left"> logge dich ein um diese Funktion zu nutzen </span>
+				
+				<p>hinzugefügt von: kürbis001 <br/>
+					Aufwand: mittel
+				</p>
+
+				<ul>
+					<li>
+						<input type="checkbox" class="hidden" id="kategorien" />
+						<label class="kategorie" for="kategorien" onclick>zugeordnete Filterbegriffe</label>
+						<ul>
+							<li>Mittagessen</li>
+							<li>Gemüse</li>
+							<li>+ Begriff hinzufügen</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+
+
+		</main>
+
+	</div>
+
+
+	<!-- ................................................................. -->
+	<footer>
+		Impressum
+	</footer>
+
+</body>
+</html>
