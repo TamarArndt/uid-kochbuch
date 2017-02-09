@@ -2,19 +2,22 @@
 \usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
 \usepackage{polyglossia}
 \setmainlanguage{german}
-\pagenumbering{gobble}
+%\pagenumbering{gobble}
 
 \usepackage{setspace}
 \onehalfspacing
 
 % ------------------------------------------------------------------------------------
 % packages
+\usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes,positioning, shadows,trees}
 \usepackage{enumerate}
 
 \usepackage{xcolor}
+
+\newcommand{\sbt}{\begin{picture}(-1,1)(-1,-3)\circle*{3}\end{picture}\ } % Punkt
 
 
 % ------------------------------------------------------------------------------------
@@ -30,20 +33,24 @@
 	{\rmfamily Tamar Arndt \\ Jens-Christan Foerster \\ Velat Gümüs \par}
 	
 	{\centering\LARGE\sffamily\bfseries Dokumentation: Kochbuchwebseite \par}
-	\vspace{1em}
+	\vspace{3em}
 }
-
+%\renewcommand{\thesection}{}
 % ====================================================================================
 % Document
 % ====================================================================================
 \begin{document}
 
 \maketitle
+\thispagestyle{empty}
 
+\tableofcontents
+\pagebreak
+\setcounter{page}{1}
 % ------------------------------------------------------------------------------------
 % AUFGABE 1
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 1: Projektidee}
+\section{Projektidee}
 
 \subsection*{a) Überblick}
 
@@ -80,7 +87,6 @@ Eine der beiden Hauptfunktionen der Webseite ist diese zu nutzen, um sich von de
 % auch erfahrene, die ihre Rezepte speichern und schnell wieder finden wollen \\
 % Gelegenheitsköche/bäcker, die nur zu bestimmten Anlass etwas brauchen -> Geburtstagskuchen
 
-\pagebreak
 \subsection*{b) Szenarien}
 
 \begin{enumerate}[(1)]
@@ -104,7 +110,7 @@ Eine der beiden Hauptfunktionen der Webseite ist diese zu nutzen, um sich von de
 % ------------------------------------------------------------------------------------
 % AUFGABE 2
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 2: Navigationsstruktur}
+\section{Navigationsstruktur}
 
 
 \textbf{kurze Erklärung:}\\
@@ -194,7 +200,7 @@ Der persönliche Bereich ist einerseits die Login-Funktion und andererseits der 
 % ------------------------------------------------------------------------------------
 % AUFGABE 3
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 3: Strukturierung der Nutzeroberfläche}
+\section{Strukturierung der Nutzeroberfläche}
 
 
 % ------------------------------------------------------------------------------------
@@ -261,9 +267,9 @@ Der persönliche Bereich ist einerseits die Login-Funktion und andererseits der 
 % ------------------------------------------------------------------------------------
 \section*{Entwurf 5} % Tamar 1
 
-\includegraphics[scale=2.5]{Entwürfe/Tamar/entwurf1.1_home.png}
-%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf1.2_rezeptseite.png}\\
-%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf1.3_hinzufügen.png}
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf1.1_home.png}\\
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf1.2_rezeptseite.png}
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf1.3_hinzufügen.png}
 
 
 
@@ -280,10 +286,10 @@ Der persönliche Bereich ist einerseits die Login-Funktion und andererseits der 
 % ------------------------------------------------------------------------------------
 \section*{Entwurf 6} % Tamar 2
 
-\includegraphics[scale=2.5]{Entwürfe/Tamar/entwurf2.1_home.png}
-%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.2_rezeptseite.png}\\
-%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.3_filtern1.png}
-%\includegraphics[scale=0.4]{Entwürfe/Tamar/entwurf2.3_filtern2.png}
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf2.1_home.png}
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf2.2_rezeptseite.png}\\
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf2.3_filtern1.png}
+\includegraphics[scale=1]{Entwürfe/Tamar/entwurf2.3_filtern2.png}
 
 
 \textbf{Vorteile:} \\
@@ -319,7 +325,7 @@ Der persönliche Bereich ist einerseits die Login-Funktion und andererseits der 
 % ------------------------------------------------------------------------------------
 % AUFGABE 4
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 4: Prototyp}
+\section{Prototyp}
 
 
 % ------------------------------------------------------------------------------------
@@ -433,40 +439,52 @@ Sie klickt auf "Rezept merken" und sieht sich dann unter "meine Rezepte" ihre bi
 % ------------------------------------------------------------------------------------
 % AUFGABE 5
 % ------------------------------------------------------------------------------------
-%\section*{Aufgabe 5: Präsentation}
-
+%\section*{Präsentation}
+\stepcounter{section}
 
 % ------------------------------------------------------------------------------------
 % AUFGABE 6
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 6: Heuristische Evaluation}
-
-\subsection*{a) Durchfürung}
-\subsection*{b) Änderungen}
-
+\section{Heuristische Evaluation}
 
 % ------------------------------------------------------------------------------------
 % AUFGABE 7
 % ------------------------------------------------------------------------------------
-%\section*{Aufgabe 7: Umsetzung}
+%\section{Umsetzung}
+\stepcounter{section}
 
 % ------------------------------------------------------------------------------------
 % AUFGABE 8
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 8: Prüfung der Barrierefreiheit}
-
+\section{Prüfung der Barrierefreiheit}
 
 % ------------------------------------------------------------------------------------
 % AUFGABE 9
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 9: Nutzertest}
+\section{Nutzertest}
 
 % ------------------------------------------------------------------------------------
 % AUFGABE 10
 % ------------------------------------------------------------------------------------
-\section*{Aufgabe 10: Projektabschluss}
+\section{Projektabschluss}
 
 
+
+\pagebreak
+% ------------------------------------------------------------------------------------
+% Anhang
+% ------------------------------------------------------------------------------------
+\pagenumbering{Roman}
+
+\begin{appendix}
+\section{Protokolle der Nutzertests}
+%\addcontentsline{toc}{section}{Anhang}
+
+\subsection*{Chris}
+\subsection*{Velat}
+\subsection*{Tamar}
+
+\end{appendix}
 
 
 
